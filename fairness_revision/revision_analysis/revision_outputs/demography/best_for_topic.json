@@ -3,11 +3,11 @@
     "results": [
       {
         "Top Features": 15,
-        "F1 Score": 0.7215189873417721
+        "F1 Score": 0.7261146496815286
       },
       {
         "Top Features": 20,
-        "F1 Score": 0.7453416149068323
+        "F1 Score": 0.7375
       },
       {
         "Top Features": 30,
@@ -15,26 +15,26 @@
       },
       {
         "Top Features": 40,
-        "F1 Score": 0.7417218543046358
+        "F1 Score": 0.7549668874172185
       },
       {
         "Top Features": 50,
-        "F1 Score": 0.7532467532467533
+        "F1 Score": 0.7631578947368421
       },
       {
         "Top Features": 60,
-        "F1 Score": 0.7692307692307693
-      },
-      {
-        "Top Features": 70,
         "F1 Score": 0.7770700636942676
       },
       {
+        "Top Features": 70,
+        "F1 Score": 0.7898089171974523
+      },
+      {
         "Top Features": 85,
-        "F1 Score": 0.75
+        "F1 Score": 0.7741935483870968
       }
     ],
-    "best_f1": 0.7770700636942676,
+    "best_f1": 0.7898089171974523,
     "best_features_subset": [
       "extraversion",
       "Religious_Attendance",
@@ -44,8 +44,8 @@
       "openness",
       "conscientiousness",
       "Closeness Centrality",
-      "Community",
       "Degree Centrality",
+      "Community",
       "neuroticism",
       "Eigenvector Centrality",
       "Nostalgic_Easy_Score",
@@ -53,47 +53,47 @@
       "gender",
       "heighttotal",
       "Family and Personal Life_Score",
-      "Discussed_Politics",
       "daded",
+      "Discussed_Politics",
       "Felt_Depressed",
-      "Music_Diversity_Score",
       "momed",
+      "Music_Diversity_Score",
       "Future_Academic_Changes_Score",
       "Exercised",
       "weight",
-      "Active_Community_Volunteerism_Score",
       "Modern_Popular_Score",
+      "Active_Community_Volunteerism_Score",
       "numberpets",
       "Professional Development_Score",
       "enjoy_follow_sports",
       "Classical_Traditional_Score",
       "Fiction_Score",
       "Musical_Theater_Score",
-      "Artistic Achievement_Score",
-      "Likelihood_Sports_Participation_Score",
-      "Experiences_of_Depression_Score",
       "fbprivacy",
+      "Artistic Achievement_Score",
       "timeperweekactiveb",
+      "Likelihood_Sports_Participation_Score",
       "Discussed_Religion",
-      "ethnicity",
+      "Experiences_of_Depression_Score",
       "pincome",
       "happy",
-      "Drank_Beer",
       "Performed_Volunteer_Work",
+      "ethnicity",
+      "Drank_Beer",
       "Felt_Overwhelmed",
       "Drank_Wine_or_Liquor",
       "dadrelig",
       "occupationmom",
       "computeruse",
       "Public_Communication",
-      "Potential_College_Transfer_Score",
       "timeperweekactivea",
+      "Potential_College_Transfer_Score",
       "reading_category",
       "familymilitary",
       "enjoy_games",
-      "Folk_Cultural_Score",
-      "eyeglasses",
       "Reading_Diversity_Score",
+      "eyeglasses",
+      "Folk_Cultural_Score",
       "contactlens",
       "health",
       "SelfHelp_Informational_Score",
@@ -115,7 +115,7 @@
       "max_features": "sqrt",
       "min_samples_leaf": 2,
       "min_samples_split": 4,
-      "n_estimators": 348
+      "n_estimators": 332
     },
     "model_comparison": [
       {
@@ -131,11 +131,11 @@
     "minorities_results": [
       {
         "Category": "gender_1",
-        "F1 Score": 0.7511655011655012
+        "F1 Score": 0.7711399711399711
       },
       {
         "Category": "ethnicity_1",
-        "F1 Score": 0.7552447552447552
+        "F1 Score": 0.788975021533161
       },
       {
         "Category": "fbprivacy_1",
@@ -147,7 +147,7 @@
       },
       {
         "Category": "engnative_1",
-        "F1 Score": 0.7312392356269991
+        "F1 Score": 0.739459815546772
       },
       {
         "Category": "pincome_1",
@@ -159,7 +159,7 @@
       },
       {
         "Category": "momrelig_1, dadrelig_1",
-        "F1 Score": 0.735071488645921
+        "F1 Score": 0.7666666666666666
       }
     ]
   },
@@ -303,122 +303,109 @@
     "results": [
       {
         "Top Features": 15,
-        "F1 Score": 0.5333333333333333
+        "F1 Score": 0.544
       },
       {
         "Top Features": 20,
-        "F1 Score": 0.5546218487394958
-      },
-      {
-        "Top Features": 30,
         "F1 Score": 0.5254237288135594
       },
       {
+        "Top Features": 30,
+        "F1 Score": 0.5299145299145299
+      },
+      {
         "Top Features": 40,
-        "F1 Score": 0.576271186440678
+        "F1 Score": 0.559322033898305
       },
       {
         "Top Features": 50,
-        "F1 Score": 0.5535714285714286
+        "F1 Score": 0.5565217391304348
       },
       {
         "Top Features": 60,
-        "F1 Score": 0.576271186440678
+        "F1 Score": 0.5982905982905983
       },
       {
         "Top Features": 70,
-        "F1 Score": 0.5641025641025641
+        "F1 Score": 0.591304347826087
       },
       {
         "Top Features": 85,
-        "F1 Score": 0.6050420168067226
+        "F1 Score": 0.5964912280701754
       }
     ],
-    "best_f1": 0.6050420168067226,
+    "best_f1": 0.5982905982905983,
     "best_features_subset": [
-      "Community",
       "Discussed_Politics",
+      "Closeness Centrality",
+      "Community",
+      "openness",
+      "agreeableness",
       "neuroticism",
       "Betweenness Centrality",
-      "agreeableness",
-      "Closeness Centrality",
       "Degree Centrality",
-      "conscientiousness",
       "extraversion",
-      "major",
-      "openness",
-      "Professional Development_Score",
-      "Likelihood_Student_Gov_Participation_Score",
+      "conscientiousness",
       "gender",
-      "Modern_Popular_Score",
-      "heighttotal",
       "Eigenvector Centrality",
+      "major",
+      "heighttotal",
       "Exercised",
-      "Drank_Beer",
       "Discussed_Religion",
-      "Classical_Traditional_Score",
-      "Likelihood_Sports_Participation_Score",
-      "Family and Personal Life_Score",
       "Drank_Wine_or_Liquor",
-      "weight",
-      "enjoy_games",
-      "pincome",
+      "Modern_Popular_Score",
+      "Drank_Beer",
       "ethnicity",
-      "happy",
-      "numberpets",
-      "Potential_College_Transfer_Score",
-      "Nostalgic_Easy_Score",
-      "Music_Diversity_Score",
-      "timeperweekactivea",
-      "Artistic Achievement_Score",
-      "Folk_Cultural_Score",
-      "Experiences_of_Depression_Score",
-      "health",
+      "weight",
       "Performed_Volunteer_Work",
-      "Future_Academic_Changes_Score",
-      "Felt_Overwhelmed",
+      "Likelihood_Student_Gov_Participation_Score",
+      "pincome",
+      "Music_Diversity_Score",
+      "Potential_College_Transfer_Score",
+      "Family and Personal Life_Score",
+      "Likelihood_Sports_Participation_Score",
+      "Classical_Traditional_Score",
+      "Professional Development_Score",
+      "happy",
       "Fiction_Score",
-      "Religious_Attendance",
-      "Felt_Depressed",
-      "momed",
-      "timeperweekactiveb",
-      "enjoy_follow_sports",
-      "daded",
+      "health",
       "dadrelig",
-      "SelfHelp_Informational_Score",
-      "Active_Community_Volunteerism_Score",
-      "Modern_Popular_Preferred",
-      "reading_category",
+      "Nostalgic_Easy_Score",
+      "numberpets",
+      "timeperweekactivea",
+      "Future_Academic_Changes_Score",
+      "timeperweekactiveb",
+      "daded",
+      "Experiences_of_Depression_Score",
       "Public_Communication",
+      "Religious_Attendance",
+      "SelfHelp_Informational_Score",
+      "momed",
+      "enjoy_games",
+      "enjoy_follow_sports",
+      "Felt_Overwhelmed",
+      "Felt_Depressed",
       "abstinent",
+      "reading_category",
       "Musical_Theater_Score",
       "Reading_Diversity_Score",
-      "Political_Campaign_Work",
-      "fbprivacy",
-      "computeruse",
-      "contactlens",
-      "NonFiction_Score",
-      "occupationmom",
-      "familymilitary",
+      "Modern_Popular_Preferred",
+      "Artistic Achievement_Score",
       "eyeglasses",
-      "momrelig",
-      "parentsmarriage",
-      "Nostalgic_Easy_Preferred",
-      "Classical_Traditional_Preferred",
-      "enjoy_movies",
-      "Fiction_Preferred",
-      "disabilitylearning",
-      "disabilityphysical"
+      "occupationmom",
+      "Active_Community_Volunteerism_Score",
+      "Folk_Cultural_Score",
+      "familymilitary"
     ],
     "best_model_path": "C:\\Users\\Stanis\u0142awSt\u0119pie\u0144\\PycharmProjects\\fairness_of_topology_demography\\fairness_revision\\revision_analysis\\revision_outputs\\demography\\fswelfare_best_model_for_selected_features.joblib",
     "best_params": {
       "bootstrap": true,
       "criterion": "entropy",
-      "max_depth": 7,
-      "max_features": "log2",
-      "min_samples_leaf": 3,
-      "min_samples_split": 6,
-      "n_estimators": 100
+      "max_depth": 6,
+      "max_features": "sqrt",
+      "min_samples_leaf": 2,
+      "min_samples_split": 7,
+      "n_estimators": 385
     },
     "model_comparison": [
       {
@@ -434,23 +421,23 @@
     "minorities_results": [
       {
         "Category": "gender_1",
-        "F1 Score": 0.6655122655122655
+        "F1 Score": 0.6177944862155388
       },
       {
         "Category": "ethnicity_1",
-        "F1 Score": 0.6940559440559441
+        "F1 Score": 0.6438482886216466
       },
       {
         "Category": "fbprivacy_1",
-        "F1 Score": 0.6862745098039216
+        "F1 Score": 0.75
       },
       {
         "Category": "gaymarriage_6",
-        "F1 Score": 0.8055555555555556
+        "F1 Score": 0.7083333333333333
       },
       {
         "Category": "engnative_1",
-        "F1 Score": 0.6615699873896594
+        "F1 Score": 0.6521430262846317
       },
       {
         "Category": "pincome_1",
@@ -458,11 +445,11 @@
       },
       {
         "Category": "momed_1, daded_1",
-        "F1 Score": 0.6643356643356644
+        "F1 Score": 0.5408695652173914
       },
       {
         "Category": "momrelig_1, dadrelig_1",
-        "F1 Score": 0.7286821705426356
+        "F1 Score": 0.6438482886216466
       }
     ]
   },
@@ -470,15 +457,15 @@
     "results": [
       {
         "Top Features": 15,
-        "F1 Score": 0.6521739130434783
+        "F1 Score": 0.6285714285714286
       },
       {
         "Top Features": 20,
-        "F1 Score": 0.6338028169014085
+        "F1 Score": 0.6376811594202898
       },
       {
         "Top Features": 30,
-        "F1 Score": 0.6944444444444444
+        "F1 Score": 0.6524822695035462
       },
       {
         "Top Features": 40,
@@ -486,73 +473,63 @@
       },
       {
         "Top Features": 50,
-        "F1 Score": 0.704225352112676
+        "F1 Score": 0.6712328767123288
       },
       {
         "Top Features": 60,
-        "F1 Score": 0.7
+        "F1 Score": 0.6621621621621622
       },
       {
         "Top Features": 70,
-        "F1 Score": 0.6956521739130435
+        "F1 Score": 0.6808510638297872
       },
       {
         "Top Features": 85,
-        "F1 Score": 0.6944444444444444
+        "F1 Score": 0.6142857142857143
       }
     ],
-    "best_f1": 0.704225352112676,
+    "best_f1": 0.6901408450704225,
     "best_features_subset": [
       "Community",
-      "ethnicity",
       "Betweenness Centrality",
       "Eigenvector Centrality",
-      "neuroticism",
-      "Closeness Centrality",
-      "extraversion",
-      "Degree Centrality",
+      "ethnicity",
       "openness",
-      "conscientiousness",
-      "major",
+      "neuroticism",
       "agreeableness",
-      "dadrelig",
+      "Degree Centrality",
+      "Closeness Centrality",
+      "conscientiousness",
+      "extraversion",
       "heighttotal",
-      "Nostalgic_Easy_Score",
-      "Likelihood_Sports_Participation_Score",
-      "timeperweekactiveb",
+      "dadrelig",
+      "major",
       "Professional Development_Score",
+      "Likelihood_Sports_Participation_Score",
       "Performed_Volunteer_Work",
-      "Folk_Cultural_Score",
-      "Family and Personal Life_Score",
-      "Artistic Achievement_Score",
-      "timeperweekactivea",
-      "Felt_Depressed",
-      "happy",
-      "momed",
-      "Classical_Traditional_Score",
-      "Public_Communication",
-      "Discussed_Religion",
+      "timeperweekactiveb",
       "Drank_Wine_or_Liquor",
-      "Future_Academic_Changes_Score",
+      "Nostalgic_Easy_Score",
+      "Felt_Depressed",
       "momrelig",
+      "timeperweekactivea",
       "Likelihood_Student_Gov_Participation_Score",
-      "Modern_Popular_Score",
-      "NonFiction_Score",
-      "Music_Diversity_Score",
-      "Fiction_Score",
-      "Drank_Beer",
-      "weight",
-      "daded",
-      "Potential_College_Transfer_Score",
-      "numberpets",
       "Discussed_Politics",
-      "Exercised",
-      "Felt_Overwhelmed",
-      "enjoy_games",
-      "Active_Community_Volunteerism_Score",
-      "Experiences_of_Depression_Score",
-      "Reading_Diversity_Score",
-      "occupationmom"
+      "weight",
+      "Family and Personal Life_Score",
+      "Folk_Cultural_Score",
+      "Public_Communication",
+      "Future_Academic_Changes_Score",
+      "Artistic Achievement_Score",
+      "NonFiction_Score",
+      "Classical_Traditional_Score",
+      "momed",
+      "Music_Diversity_Score",
+      "Drank_Beer",
+      "health",
+      "daded",
+      "Modern_Popular_Score",
+      "Discussed_Religion"
     ],
     "best_model_path": "C:\\Users\\Stanis\u0142awSt\u0119pie\u0144\\PycharmProjects\\fairness_of_topology_demography\\fairness_revision\\revision_analysis\\revision_outputs\\demography\\jobguar_best_model_for_selected_features.joblib",
     "best_params": {
@@ -561,8 +538,8 @@
       "max_depth": 8,
       "max_features": "log2",
       "min_samples_leaf": 2,
-      "min_samples_split": 5,
-      "n_estimators": 400
+      "min_samples_split": 4,
+      "n_estimators": 76
     },
     "model_comparison": [
       {
@@ -578,35 +555,35 @@
     "minorities_results": [
       {
         "Category": "gender_1",
-        "F1 Score": 0.66991341991342
+        "F1 Score": 0.6854816824966079
       },
       {
         "Category": "ethnicity_1",
-        "F1 Score": 0.6181818181818182
+        "F1 Score": 0.6759259259259259
       },
       {
         "Category": "fbprivacy_1",
-        "F1 Score": 0.6761133603238867
+        "F1 Score": 0.746031746031746
       },
       {
         "Category": "gaymarriage_6",
-        "F1 Score": 0.5961538461538461
+        "F1 Score": 0.4642857142857143
       },
       {
         "Category": "engnative_1",
-        "F1 Score": 0.64576802507837
+        "F1 Score": 0.6280564263322884
       },
       {
         "Category": "pincome_1",
-        "F1 Score": 0.7543859649122806
+        "F1 Score": 0.5906432748538011
       },
       {
         "Category": "momed_1, daded_1",
-        "F1 Score": 0.8693284936479129
+        "F1 Score": 0.7883597883597884
       },
       {
         "Category": "momrelig_1, dadrelig_1",
-        "F1 Score": 0.5512820512820513
+        "F1 Score": 0.6258503401360545
       }
     ]
   },
@@ -614,99 +591,79 @@
     "results": [
       {
         "Top Features": 15,
-        "F1 Score": 0.5882352941176471
+        "F1 Score": 0.6153846153846154
       },
       {
         "Top Features": 20,
-        "F1 Score": 0.6222222222222222
+        "F1 Score": 0.625
       },
       {
         "Top Features": 30,
-        "F1 Score": 0.6814814814814815
+        "F1 Score": 0.6865671641791045
       },
       {
         "Top Features": 40,
-        "F1 Score": 0.6716417910447762
+        "F1 Score": 0.6666666666666666
       },
       {
         "Top Features": 50,
-        "F1 Score": 0.6861313868613139
+        "F1 Score": 0.6466165413533834
       },
       {
         "Top Features": 60,
-        "F1 Score": 0.6857142857142857
+        "F1 Score": 0.6518518518518519
       },
       {
         "Top Features": 70,
-        "F1 Score": 0.6762589928057554
+        "F1 Score": 0.656934306569343
       },
       {
         "Top Features": 85,
-        "F1 Score": 0.6666666666666666
+        "F1 Score": 0.656934306569343
       }
     ],
-    "best_f1": 0.6861313868613139,
+    "best_f1": 0.6865671641791045,
     "best_features_subset": [
       "extraversion",
       "numberpets",
       "neuroticism",
       "agreeableness",
+      "major",
+      "parentsmarriage",
       "Degree Centrality",
       "Community",
       "Betweenness Centrality",
-      "Closeness Centrality",
       "conscientiousness",
+      "Closeness Centrality",
       "Religious_Attendance",
-      "parentsmarriage",
       "openness",
-      "major",
       "Experiences_of_Depression_Score",
-      "Eigenvector Centrality",
       "daded",
-      "ethnicity",
       "Nostalgic_Easy_Score",
+      "ethnicity",
       "dadrelig",
-      "enjoy_follow_sports",
-      "Professional Development_Score",
-      "heighttotal",
-      "Future_Academic_Changes_Score",
-      "Music_Diversity_Score",
-      "weight",
       "Modern_Popular_Score",
-      "momed",
+      "Future_Academic_Changes_Score",
+      "weight",
+      "Music_Diversity_Score",
+      "enjoy_follow_sports",
+      "heighttotal",
+      "Eigenvector Centrality",
       "Family and Personal Life_Score",
-      "reading_category",
-      "Likelihood_Student_Gov_Participation_Score",
-      "Discussed_Politics",
+      "momed",
+      "Professional Development_Score",
       "NonFiction_Score",
-      "Exercised",
-      "Likelihood_Sports_Participation_Score",
-      "Folk_Cultural_Score",
-      "Performed_Volunteer_Work",
-      "Fiction_Score",
-      "enjoy_games",
-      "timeperweekactiveb",
-      "Discussed_Religion",
-      "Classical_Traditional_Score",
-      "Felt_Depressed",
-      "happy",
-      "Reading_Diversity_Score",
-      "Active_Community_Volunteerism_Score",
-      "Drank_Wine_or_Liquor",
-      "Artistic Achievement_Score",
-      "timeperweekactivea",
-      "Felt_Overwhelmed",
-      "Public_Communication"
+      "Discussed_Politics"
     ],
     "best_model_path": "C:\\Users\\Stanis\u0142awSt\u0119pie\u0144\\PycharmProjects\\fairness_of_topology_demography\\fairness_revision\\revision_analysis\\revision_outputs\\demography\\marijuana_best_model_for_selected_features.joblib",
     "best_params": {
       "bootstrap": false,
       "criterion": "gini",
       "max_depth": 8,
-      "max_features": "log2",
+      "max_features": "sqrt",
       "min_samples_leaf": 2,
-      "min_samples_split": 4,
-      "n_estimators": 400
+      "min_samples_split": 8,
+      "n_estimators": 312
     },
     "model_comparison": [
       {
@@ -722,11 +679,11 @@
     "minorities_results": [
       {
         "Category": "gender_1",
-        "F1 Score": 0.6720430107526881
+        "F1 Score": 0.655367231638418
       },
       {
         "Category": "ethnicity_1",
-        "F1 Score": 0.6846846846846847
+        "F1 Score": 0.712171052631579
       },
       {
         "Category": "fbprivacy_1",
@@ -734,23 +691,23 @@
       },
       {
         "Category": "gaymarriage_6",
-        "F1 Score": 0.7529411764705882
+        "F1 Score": 0.6971153846153846
       },
       {
         "Category": "engnative_1",
-        "F1 Score": 0.672463768115942
+        "F1 Score": 0.6813909774436091
       },
       {
         "Category": "pincome_1",
-        "F1 Score": 0.7754010695187166
+        "F1 Score": 0.8444444444444444
       },
       {
         "Category": "momed_1, daded_1",
-        "F1 Score": 0.7078260869565217
+        "F1 Score": 0.75
       },
       {
         "Category": "momrelig_1, dadrelig_1",
-        "F1 Score": 0.6499999999999999
+        "F1 Score": 0.6546052631578947
       }
     ]
   },

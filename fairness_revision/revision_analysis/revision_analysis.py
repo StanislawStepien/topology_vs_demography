@@ -165,13 +165,24 @@ def paired(y, pa, pb, metric=bin_f1, B=1500):
 def rf():  # common classifier for the approach comparison; isolates the feature family
     return RandomForestClassifier(n_estimators=200, max_depth=6, class_weight="balanced", random_state=42, n_jobs=-1)
 
+# ---- progress logging (flushes immediately so it shows live, even when stdout is block-buffered) ----
+import time as _time
+_T0 = _time.time()
+def _log(msg):
+    el = _time.time() - _T0
+    print("[%3d:%02d] %s" % (int(el // 60), int(el % 60), msg), flush=True)
+
 # ========================= item A: rebuild =========================
 def cmd_rebuild():
     cfgD, cfgH = _cfg(OUT_DIR / "demography"), _cfg(OUT_DIR / "hybrid")
     demog, fused, data, mino = load_data(cfgD)
     print("demography feature matrix:", demog.shape, "| honest hybrid (+phone):", fused.shape)
+    _log("REBUILD: Bayesian search for the per-approach best models (this is the slow phase).")
+    _log("  [1/2] fitting demography models over %d topics (Bayesian search x CV)..." % len(TOPICS))
     rD = PL.train_and_evaluate(cfgD, demog, data, mino)     # demography-only hybrid (baseline)
+    _log("  [2/2] fitting hybrid (+phone) models over %d topics..." % len(TOPICS))
     rH = PL.train_and_evaluate(cfgH, fused, data, mino)     # honest hybrid (+ phone battery)
+    _log("  model fitting complete; computing paired comparisons on the shared test set.")
     print("\ntopic             demog  hybrid   dF1 [95% CI]        McNemar p")
     for t in TOPICS:
         Xtr, Xte, ytr, yte, _, _ = PL.build_topic_dataset(t, fused, data[t], mino, cfgH)
@@ -187,30 +198,42 @@ def cmd_rebuild():
 # ========================= item B: stats =========================
 def cmd_stats():
     cfg = _cfg(OUT_DIR / "stats"); _, fused, data, mino = load_data(cfg)
-    out = {}
-    for t in TOPICS:
+    _log("STATS: per-question metrics + pairwise significance (common RF) over %d topics." % len(TOPICS))
+    out = {}; metrics = []
+    for i, t in enumerate(TOPICS, 1):
+        _log("  stats %d/%d: %s" % (i, len(TOPICS), t))
         Xtr, Xte, ytr, yte, _, _ = PL.build_topic_dataset(t, fused, data[t], mino, cfg)
         y = np.asarray(yte); n = len(y); bal = float(np.mean(y))
         fT = [c for c in PHONE if c in Xte.columns]; fD = [c for c in Xte.columns if c not in fT]; fH = list(Xte.columns)
         pD = rf().fit(Xtr[fD], ytr).predict(Xte[fD]); pT = rf().fit(Xtr[fT], ytr).predict(Xte[fT]); pH = rf().fit(Xtr[fH], ytr).predict(Xte[fH])
-        dmf = DummyClassifier(strategy="most_frequent").fit(Xtr[fH], ytr).predict(Xte[fH])
-        print("### %s  (n_test=%d, P(mispred)=%.2f, dummy-most-freq F1=%.3f)" % (t, n, bal, bin_f1(y, dmf)))
+        dmf = DummyClassifier(strategy="most_frequent").fit(Xtr[fH], ytr).predict(Xte[fH]); dummy_f1 = bin_f1(y, dmf)
+        print("### %s  (n_test=%d, P(mispred)=%.2f, dummy-most-freq F1=%.3f)" % (t, n, bal, dummy_f1))
         for lab, p in [("demography", pD), ("topology", pT), ("hybrid", pH)]:
-            print("   %-11s F1=%.3f %s  precision=%.2f  recall=%.2f"
-                  % (lab, bin_f1(y, p), "[%.2f,%.2f]" % boot_ci(y, p),
-                     precision_score(y, p, pos_label=1, zero_division=0), recall_score(y, p, pos_label=1, zero_division=0)))
+            f1 = bin_f1(y, p); lo, hi = boot_ci(y, p)
+            pr = precision_score(y, p, pos_label=1, zero_division=0); rc = recall_score(y, p, pos_label=1, zero_division=0)
+            print("   %-11s F1=%.3f [%.2f,%.2f]  precision=%.2f  recall=%.2f" % (lab, f1, lo, hi, pr, rc))
+            metrics.append(dict(question=t, approach=lab, f1=round(f1, 3), ci_low=round(lo, 3), ci_high=round(hi, 3),
+                                precision=round(pr, 3), recall=round(rc, 3), dummy_f1=round(dummy_f1, 3),
+                                balance=round(bal, 3), n_test=n))
         for lab, a, b in [("hybrid vs demography", pD, pH), ("hybrid vs topology", pT, pH), ("topology vs demography", pD, pT)]:
             r = paired(y, a, b); print("     %-24s dF1=%+.3f [%+.2f,%+.2f]  McNemar p=%.3f (b=%d,c=%d)%s"
                                        % (lab, r["delta"], *r["dci"], r["p"], r["b"], r["c"], "  *SIG" if r["p"] < 0.05 else ""))
         out[t] = dict(n=n, balance=bal)
     json.dump(out, open(OUT_DIR / "stats_summary.json", "w"), indent=2)
+    import csv as _csv
+    with open(OUT_DIR / "stats" / "general_pop_metrics.csv", "w", newline="") as f:
+        w = _csv.DictWriter(f, fieldnames=["question", "approach", "f1", "ci_low", "ci_high", "precision", "recall", "dummy_f1", "balance", "n_test"])
+        w.writeheader(); w.writerows(metrics)
+    print("wrote", OUT_DIR / "stats" / "general_pop_metrics.csv")
 
 # ========================= item C: explainability =========================
 def cmd_shap():
     import shap
     cfg = _cfg(OUT_DIR / "shap"); _, fused, data, mino = load_data(cfg)
+    _log("SHAP: TreeExplainer attribution over %d topics." % len(TOPICS))
     agg = {}; topo_share = {}; nfeat_topo = nfeat = 0; dt_rules = None
-    for t in TOPICS:
+    for i, t in enumerate(TOPICS, 1):
+        _log("  shap %d/%d: %s" % (i, len(TOPICS), t))
         Xtr, Xte, ytr, yte, _, _ = PL.build_topic_dataset(t, fused, data[t], mino, cfg)
         feats = list(Xte.columns); nfeat = len(feats); nfeat_topo = sum(f in TOPO for f in feats)
         m = rf().fit(Xtr[feats], ytr)
@@ -234,6 +257,7 @@ def cmd_shap():
 # ============== per-minority subgroup F1 + bootstrap CI (supplement) ==============
 def cmd_minorities():
     cfg = _cfg(OUT_DIR / "stats"); _, fused, data, mino = load_data(cfg)
+    _log("MINORITIES: per-subgroup F1 + bootstrap CI (common RF) over %d topics." % len(TOPICS))
     import csv as _csv
     rows = []
     print("\nPer-minority F1 [95%% CI] on the misprediction class (common RF; small n gives wide CI):")
@@ -265,9 +289,13 @@ def cmd_minorities():
     print("\nwrote", outp, "(%d rows)" % len(rows))
 
 if __name__ == "__main__":
+    try: sys.stdout.reconfigure(line_buffering=True)
+    except Exception: pass
     ap = argparse.ArgumentParser(); ap.add_argument("cmd", choices=["rebuild", "stats", "shap", "minorities", "all"])
     c = ap.parse_args().cmd
+    _log("run started: '%s'" % c)
     if c in ("rebuild", "all"): cmd_rebuild()
     if c in ("stats", "all"): cmd_stats()
     if c in ("shap", "all"): cmd_shap()
     if c in ("minorities", "all"): cmd_minorities()
+    _log("run complete: '%s'" % c)

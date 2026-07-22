@@ -1,0 +1,145 @@
+question,minority,approach,n_test,n_positive,f1,ci_low,ci_high
+euthanasia,gender_1,demography,61,35,0.831,0.723,0.917
+euthanasia,gender_1,topology,61,35,0.676,0.541,0.785
+euthanasia,gender_1,hybrid,61,35,0.85,0.755,0.925
+euthanasia,ethnicity_1,demography,35,23,0.864,0.738,0.957
+euthanasia,ethnicity_1,topology,35,23,0.681,0.512,0.815
+euthanasia,ethnicity_1,hybrid,35,23,0.87,0.75,0.962
+euthanasia,fbprivacy_1,demography,16,9,0.778,0.5,0.952
+euthanasia,fbprivacy_1,topology,16,9,0.632,0.308,0.842
+euthanasia,fbprivacy_1,hybrid,16,9,0.75,0.462,0.941
+euthanasia,gaymarriage_6,demography,21,9,0.632,0.296,0.857
+euthanasia,gaymarriage_6,topology,21,9,0.571,0.267,0.8
+euthanasia,gaymarriage_6,hybrid,21,9,0.6,0.308,0.818
+euthanasia,engnative_1,demography,113,66,0.779,0.695,0.85
+euthanasia,engnative_1,topology,113,66,0.637,0.538,0.728
+euthanasia,engnative_1,hybrid,113,66,0.776,0.693,0.847
+euthanasia,pincome_1,demography,14,8,0.556,0.25,0.783
+euthanasia,pincome_1,topology,14,8,0.556,0.25,0.783
+euthanasia,pincome_1,hybrid,14,8,0.556,0.25,0.8
+euthanasia,"momed_1, daded_1",demography,24,20,0.919,0.812,1.0
+euthanasia,"momed_1, daded_1",topology,24,20,0.629,0.4,0.8
+euthanasia,"momed_1, daded_1",hybrid,24,20,0.872,0.727,0.957
+euthanasia,"momrelig_1, dadrelig_1",demography,35,22,0.769,0.59,0.895
+euthanasia,"momrelig_1, dadrelig_1",topology,35,22,0.714,0.545,0.857
+euthanasia,"momrelig_1, dadrelig_1",hybrid,35,22,0.78,0.623,0.905
+fssocsec,gender_1,demography,61,18,0.385,0.133,0.6
+fssocsec,gender_1,topology,61,18,0.316,0.113,0.5
+fssocsec,gender_1,hybrid,61,18,0.4,0.105,0.621
+fssocsec,ethnicity_1,demography,35,10,0.333,0.0,0.586
+fssocsec,ethnicity_1,topology,35,10,0.273,0.0,0.5
+fssocsec,ethnicity_1,hybrid,35,10,0.118,0.0,0.353
+fssocsec,fbprivacy_1,demography,16,7,0.462,0.0,0.769
+fssocsec,fbprivacy_1,topology,16,7,0.5,0.0,0.8
+fssocsec,fbprivacy_1,hybrid,16,7,0.667,0.308,0.889
+fssocsec,gaymarriage_6,demography,21,8,0.588,0.25,0.818
+fssocsec,gaymarriage_6,topology,21,8,0.286,0.0,0.588
+fssocsec,gaymarriage_6,hybrid,21,8,0.429,0.0,0.714
+fssocsec,engnative_1,demography,113,41,0.634,0.5,0.747
+fssocsec,engnative_1,topology,113,41,0.489,0.358,0.608
+fssocsec,engnative_1,hybrid,113,41,0.615,0.475,0.739
+fssocsec,pincome_1,demography,14,5,0.8,0.381,1.0
+fssocsec,pincome_1,topology,14,5,0.333,0.0,0.625
+fssocsec,pincome_1,hybrid,14,5,0.889,0.571,1.0
+fssocsec,"momed_1, daded_1",demography,24,11,0.556,0.25,0.8
+fssocsec,"momed_1, daded_1",topology,24,11,0.333,0.0,0.588
+fssocsec,"momed_1, daded_1",hybrid,24,11,0.286,0.0,0.564
+fssocsec,"momrelig_1, dadrelig_1",demography,35,14,0.4,0.108,0.643
+fssocsec,"momrelig_1, dadrelig_1",topology,35,14,0.385,0.105,0.609
+fssocsec,"momrelig_1, dadrelig_1",hybrid,35,14,0.5,0.167,0.75
+fswelfare,gender_1,demography,61,24,0.564,0.351,0.732
+fswelfare,gender_1,topology,61,24,0.27,0.067,0.455
+fswelfare,gender_1,hybrid,61,24,0.389,0.169,0.571
+fswelfare,ethnicity_1,demography,35,14,0.72,0.476,0.889
+fswelfare,ethnicity_1,topology,35,14,0.444,0.182,0.667
+fswelfare,ethnicity_1,hybrid,35,14,0.435,0.129,0.667
+fswelfare,fbprivacy_1,demography,16,7,0.75,0.444,0.947
+fswelfare,fbprivacy_1,topology,16,7,0.571,0.182,0.824
+fswelfare,fbprivacy_1,hybrid,16,7,0.571,0.2,0.842
+fswelfare,gaymarriage_6,demography,21,9,0.778,0.5,0.952
+fswelfare,gaymarriage_6,topology,21,9,0.429,0.0,0.706
+fswelfare,gaymarriage_6,hybrid,21,9,0.625,0.286,0.875
+fswelfare,engnative_1,demography,113,51,0.634,0.513,0.739
+fswelfare,engnative_1,topology,113,51,0.526,0.393,0.64
+fswelfare,engnative_1,hybrid,113,51,0.562,0.432,0.673
+fswelfare,pincome_1,demography,14,7,0.615,0.222,0.875
+fswelfare,pincome_1,topology,14,7,0.364,0.0,0.667
+fswelfare,pincome_1,hybrid,14,7,0.545,0.0,0.833
+fswelfare,"momed_1, daded_1",demography,24,15,0.692,0.455,0.87
+fswelfare,"momed_1, daded_1",topology,24,15,0.455,0.138,0.667
+fswelfare,"momed_1, daded_1",hybrid,24,15,0.381,0.105,0.612
+fswelfare,"momrelig_1, dadrelig_1",demography,35,12,0.583,0.326,0.8
+fswelfare,"momrelig_1, dadrelig_1",topology,35,12,0.381,0.108,0.632
+fswelfare,"momrelig_1, dadrelig_1",hybrid,35,12,0.421,0.118,0.667
+jobguar,gender_1,demography,61,32,0.656,0.5,0.782
+jobguar,gender_1,topology,61,32,0.476,0.305,0.609
+jobguar,gender_1,hybrid,61,32,0.648,0.508,0.765
+jobguar,ethnicity_1,demography,35,24,0.836,0.72,0.931
+jobguar,ethnicity_1,topology,35,24,0.625,0.455,0.778
+jobguar,ethnicity_1,hybrid,35,24,0.741,0.598,0.867
+jobguar,fbprivacy_1,demography,16,8,0.762,0.526,0.923
+jobguar,fbprivacy_1,topology,16,8,0.706,0.414,0.909
+jobguar,fbprivacy_1,hybrid,16,8,0.762,0.5,0.929
+jobguar,gaymarriage_6,demography,21,12,0.583,0.316,0.786
+jobguar,gaymarriage_6,topology,21,12,0.56,0.3,0.774
+jobguar,gaymarriage_6,hybrid,21,12,0.667,0.428,0.839
+jobguar,engnative_1,demography,113,56,0.583,0.468,0.686
+jobguar,engnative_1,topology,113,56,0.519,0.4,0.624
+jobguar,engnative_1,hybrid,113,56,0.649,0.541,0.746
+jobguar,pincome_1,demography,14,5,0.5,0.0,0.857
+jobguar,pincome_1,topology,14,5,0.222,0.0,0.545
+jobguar,pincome_1,hybrid,14,5,0.6,0.0,0.909
+jobguar,"momed_1, daded_1",demography,24,13,0.897,0.75,1.0
+jobguar,"momed_1, daded_1",topology,24,13,0.645,0.429,0.831
+jobguar,"momed_1, daded_1",hybrid,24,13,0.828,0.64,0.947
+jobguar,"momrelig_1, dadrelig_1",demography,35,22,0.784,0.645,0.893
+jobguar,"momrelig_1, dadrelig_1",topology,35,22,0.72,0.552,0.842
+jobguar,"momrelig_1, dadrelig_1",hybrid,35,22,0.764,0.627,0.867
+marijuana,gender_1,demography,61,29,0.59,0.422,0.725
+marijuana,gender_1,topology,61,29,0.576,0.429,0.709
+marijuana,gender_1,hybrid,61,29,0.554,0.39,0.686
+marijuana,ethnicity_1,demography,35,19,0.718,0.536,0.857
+marijuana,ethnicity_1,topology,35,19,0.818,0.667,0.93
+marijuana,ethnicity_1,hybrid,35,19,0.81,0.651,0.925
+marijuana,fbprivacy_1,demography,16,8,0.8,0.5,0.957
+marijuana,fbprivacy_1,topology,16,8,0.7,0.4,0.889
+marijuana,fbprivacy_1,hybrid,16,8,0.75,0.444,0.947
+marijuana,gaymarriage_6,demography,21,11,0.72,0.476,0.889
+marijuana,gaymarriage_6,topology,21,11,0.667,0.435,0.848
+marijuana,gaymarriage_6,hybrid,21,11,0.769,0.538,0.929
+marijuana,engnative_1,demography,113,59,0.661,0.541,0.757
+marijuana,engnative_1,topology,113,59,0.646,0.541,0.736
+marijuana,engnative_1,hybrid,113,59,0.672,0.567,0.763
+marijuana,pincome_1,demography,14,5,0.667,0.25,0.928
+marijuana,pincome_1,topology,14,5,0.462,0.0,0.744
+marijuana,pincome_1,hybrid,14,5,0.615,0.222,0.875
+marijuana,"momed_1, daded_1",demography,24,11,0.583,0.3,0.794
+marijuana,"momed_1, daded_1",topology,24,11,0.714,0.476,0.875
+marijuana,"momed_1, daded_1",hybrid,24,11,0.69,0.458,0.857
+marijuana,"momrelig_1, dadrelig_1",demography,35,13,0.581,0.345,0.773
+marijuana,"momrelig_1, dadrelig_1",topology,35,13,0.632,0.43,0.78
+marijuana,"momrelig_1, dadrelig_1",hybrid,35,13,0.595,0.375,0.757
+toomucheqrights,gender_1,demography,61,29,0.629,0.48,0.752
+toomucheqrights,gender_1,topology,61,29,0.646,0.492,0.769
+toomucheqrights,gender_1,hybrid,61,29,0.657,0.508,0.779
+toomucheqrights,ethnicity_1,demography,35,15,0.444,0.186,0.667
+toomucheqrights,ethnicity_1,topology,35,15,0.516,0.276,0.703
+toomucheqrights,ethnicity_1,hybrid,35,15,0.552,0.31,0.743
+toomucheqrights,fbprivacy_1,demography,16,12,0.696,0.421,0.885
+toomucheqrights,fbprivacy_1,topology,16,12,0.7,0.4,0.893
+toomucheqrights,fbprivacy_1,hybrid,16,12,0.571,0.316,0.8
+toomucheqrights,gaymarriage_6,demography,21,11,0.455,0.19,0.696
+toomucheqrights,gaymarriage_6,topology,21,11,0.455,0.182,0.692
+toomucheqrights,gaymarriage_6,hybrid,21,11,0.609,0.358,0.815
+toomucheqrights,engnative_1,demography,113,65,0.676,0.583,0.757
+toomucheqrights,engnative_1,topology,113,65,0.73,0.639,0.806
+toomucheqrights,engnative_1,hybrid,113,65,0.726,0.635,0.803
+toomucheqrights,pincome_1,demography,14,10,0.87,0.667,1.0
+toomucheqrights,pincome_1,topology,14,10,0.857,0.667,1.0
+toomucheqrights,pincome_1,hybrid,14,10,0.87,0.667,1.0
+toomucheqrights,"momed_1, daded_1",demography,24,10,0.526,0.222,0.767
+toomucheqrights,"momed_1, daded_1",topology,24,10,0.522,0.222,0.741
+toomucheqrights,"momed_1, daded_1",hybrid,24,10,0.609,0.348,0.815
+toomucheqrights,"momrelig_1, dadrelig_1",demography,35,19,0.562,0.333,0.763
+toomucheqrights,"momrelig_1, dadrelig_1",topology,35,19,0.632,0.424,0.796
+toomucheqrights,"momrelig_1, dadrelig_1",hybrid,35,19,0.686,0.483,0.84

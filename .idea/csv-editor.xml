@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\fairness_revision\revision_analysis\revision_outputs\stats\per_minority_ci.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
