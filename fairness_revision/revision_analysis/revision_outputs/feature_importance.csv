@@ -1,0 +1,89 @@
+feature,shap_share,family
+Eigenvector centrality,0.03857173681840785,topological
+extraversion,0.03451848663011958,demographic
+Discussed_Politics,0.03225068946483205,demographic
+daded,0.026417671339507617,demographic
+Religious_Attendance,0.02625581686437876,demographic
+Laplacian,0.025360590820765177,topological
+major,0.023778017840505976,demographic
+Pagerank,0.023437425096283347,topological
+Sum of CogsNet,0.023080745456985553,topological
+gender,0.02208563492046657,demographic
+Load,0.021525708661470536,topological
+Subgraph centrality exp,0.021416027719836583,topological
+Avg Neighbour's InteractionSum,0.021021546138903963,topological
+Betweenness-centrality,0.018703925113522174,topological
+neuroticism,0.01864969867654262,demographic
+heighttotal,0.018612934087676895,demographic
+ethnicity,0.017676386233928306,demographic
+Likelihood_Student_Gov_Participation_Score,0.015838388905507907,demographic
+pincome,0.01546389385165266,demographic
+Degree-centrality,0.015376408347788311,topological
+agreeableness,0.015264280279485898,demographic
+Likelihood_Sports_Participation_Score,0.015173496698131832,demographic
+openness,0.015101853723128769,demographic
+conscientiousness,0.014870657783685763,demographic
+dadrelig,0.01451627799860691,demographic
+Closeness centrality,0.014319324156862956,topological
+Avg Neighbour Degree,0.013952706254086218,topological
+Avg Neighbour's CogsNetSum,0.013582558330548434,topological
+Eigenvector Centrality,0.013296109752239682,topological
+Closeness Centrality,0.01326362543865165,topological
+Community,0.012632759267846959,topological
+Betweenness Centrality,0.012565842317431233,topological
+Drank_Beer,0.011803962843644027,demographic
+numberpets,0.011355862032306024,demographic
+weight,0.011170862796563054,demographic
+Nostalgic_Easy_Score,0.01069109940858294,demographic
+Information centrality,0.010562181018214878,topological
+Degree Centrality,0.010512041466916837,topological
+parentsmarriage,0.01047690609415875,demographic
+Discussed_Religion,0.010001356915868863,demographic
+momrelig,0.009794409356321962,demographic
+Node degree,0.009657436802147581,topological
+Folk_Cultural_Score,0.009606623264597462,demographic
+Current flow closeness centrality,0.00943669144202416,topological
+enjoy_games,0.009200682201959192,demographic
+Music_Diversity_Score,0.00899752014985386,demographic
+Drank_Wine_or_Liquor,0.008889478339832373,demographic
+Felt_Depressed,0.008704090809981297,demographic
+momed,0.008249030891441436,demographic
+Family and Personal Life_Score,0.007851368886190035,demographic
+health,0.0077783248974927525,demographic
+Future_Academic_Changes_Score,0.0076752611648385465,demographic
+Fiction_Score,0.007554577769305015,demographic
+Modern_Popular_Score,0.007441359087558317,demographic
+Professional Development_Score,0.006721023668061109,demographic
+Classical_Traditional_Score,0.006704224916682468,demographic
+Performed_Volunteer_Work,0.006536429836385835,demographic
+timeperweekactiveb,0.006519385769602972,demographic
+NonFiction_Score,0.006518438801233551,demographic
+Exercised,0.006515994665830151,demographic
+Artistic Achievement_Score,0.006473944188114681,demographic
+Felt_Overwhelmed,0.006204108953265789,demographic
+Potential_College_Transfer_Score,0.0061975430796598575,demographic
+enjoy_follow_sports,0.006186130781848454,demographic
+abstinent,0.006164227269925917,demographic
+Modern_Popular_Preferred,0.006085643768553164,demographic
+happy,0.006063503683391819,demographic
+SelfHelp_Informational_Score,0.005898567644969435,demographic
+familymilitary,0.005649376349947739,demographic
+Active_Community_Volunteerism_Score,0.005637194503131182,demographic
+Experiences_of_Depression_Score,0.005560882205255889,demographic
+computeruse,0.00551614415288938,demographic
+Public_Communication,0.005515845683695426,demographic
+contactlens,0.005337997437845102,demographic
+reading_category,0.005067056361642481,demographic
+timeperweekactivea,0.005058026934070582,demographic
+Musical_Theater_Score,0.004722362957319211,demographic
+Reading_Diversity_Score,0.0042770340472957896,demographic
+fbprivacy,0.004113472087772762,demographic
+occupationmom,0.0039382675597864885,demographic
+eyeglasses,0.0031589754293857492,demographic
+Classical_Traditional_Preferred,0.0025958351549690496,demographic
+Political_Campaign_Work,0.0024062702801063663,demographic
+Nostalgic_Easy_Preferred,0.0023380396741436212,demographic
+enjoy_movies,0.0020236894428892612,demographic
+Fiction_Preferred,0.0014772865500985405,demographic
+disabilitylearning,0.0006731225198339196,demographic
+disabilityphysical,0.00015160101080813327,demographic
