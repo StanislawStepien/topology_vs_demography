@@ -12,26 +12,30 @@ Usage:
 """
 import sys
 from pathlib import Path
-import pandas as pd
+
 import matplotlib
-matplotlib.use("Agg")                    # drop this line for interactive backends
+import pandas as pd
+
+matplotlib.use("Agg")  # drop this line for interactive backends
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 
 # ----------------------------- STYLE KNOBS -----------------------------
-TOP_N       = 15
-COLORS      = {"demographic": "#2563eb", "topological": "#d97706"}
-FIGSIZE     = (8.5, 6)
-DPI         = 150
-LABEL_FONT  = 8
-TITLE       = "What drives predicted CoDiNG misclassification (hybrid model)"
-XLABEL      = "Mean |SHAP| (share of attribution, averaged across the 6 questions)"
-LABEL_TRUNC = 40                          # truncate long feature names to this many chars
-BAR_HEIGHT  = 0.8
+TOP_N = 15
+COLORS = {"demographic": "#2563eb", "topological": "#d97706"}
+FIGSIZE = (8.5, 6)
+DPI = 150
+LABEL_FONT = 8
+TITLE = "What drives predicted CoDiNG misclassification (hybrid model)"
+XLABEL = "Mean |SHAP| (share of attribution, averaged across the 6 questions)"
+LABEL_TRUNC = 40  # truncate long feature names to this many chars
+BAR_HEIGHT = 0.8
+
+
 # -----------------------------------------------------------------------
 
 def main(csv_path, out_path):
-    df = pd.read_csv(csv_path).head(TOP_N).iloc[::-1]      # top-N, ascending for barh
+    df = pd.read_csv(csv_path).head(TOP_N).iloc[::-1]  # top-N, ascending for barh
     colors = [COLORS.get(fam, "#888888") for fam in df["family"]]
 
     fig, ax = plt.subplots(figsize=FIGSIZE)
@@ -46,6 +50,7 @@ def main(csv_path, out_path):
     fig.tight_layout()
     fig.savefig(out_path, dpi=DPI)
     print("saved", out_path)
+
 
 if __name__ == "__main__":
     csv = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("revision_outputs/feature_importance.csv")

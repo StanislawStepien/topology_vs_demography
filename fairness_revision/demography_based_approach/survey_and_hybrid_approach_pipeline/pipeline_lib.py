@@ -1,10 +1,9 @@
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional, Tuple
-
-import json
+from typing import Dict, List, Optional, Tuple
 
 import joblib
 import numpy as np
@@ -54,7 +53,7 @@ class PipelineConfig:
 
 
 def load_config(config_path: Path) -> PipelineConfig:
-    #config_path=Path('/code/demography_based_approach/survey_and_hybrid_approach_pipeline/config.json')
+    # config_path=Path('/code/demography_based_approach/survey_and_hybrid_approach_pipeline/config.json')
     raw = json.loads(config_path.read_text())
 
     base_dir = Path(raw.get("base_dir", config_path.parent)).resolve()
@@ -222,11 +221,11 @@ def _extract_minority_ids(minorities: Dict[str, pd.DataFrame]) -> np.ndarray:
 
 
 def build_topic_dataset(
-    topic: str,
-    demog_df: pd.DataFrame,
-    topic_df: pd.DataFrame,
-    minorities: Dict[str, pd.DataFrame],
-    config: PipelineConfig,
+        topic: str,
+        demog_df: pd.DataFrame,
+        topic_df: pd.DataFrame,
+        minorities: Dict[str, pd.DataFrame],
+        config: PipelineConfig,
 ) -> Tuple[pd.DataFrame, pd.DataFrame, pd.Series, pd.Series, pd.DataFrame, pd.DataFrame]:
     merged = topic_df.merge(demog_df, on=["egoid", "SurveyNr"], how="inner")
     merged = merged.drop_duplicates()
@@ -268,11 +267,11 @@ def build_topic_dataset(
 
 
 def evaluate_on_minorities(
-    model: RandomForestClassifier,
-    features: List[str],
-    X: pd.DataFrame,
-    y: pd.DataFrame,
-    minorities: Dict[str, pd.DataFrame],
+        model: RandomForestClassifier,
+        features: List[str],
+        X: pd.DataFrame,
+        y: pd.DataFrame,
+        minorities: Dict[str, pd.DataFrame],
 ) -> pd.DataFrame:
     results = []
     clean_features = [f for f in features if f not in ("egoid", "Y") and f in X.columns]
@@ -298,10 +297,10 @@ def evaluate_on_minorities(
 
 
 def train_and_evaluate(
-    config: PipelineConfig,
-    demog_df: pd.DataFrame,
-    data_frames_by_topic: Dict[str, pd.DataFrame],
-    minorities: Dict[str, pd.DataFrame],
+        config: PipelineConfig,
+        demog_df: pd.DataFrame,
+        data_frames_by_topic: Dict[str, pd.DataFrame],
+        minorities: Dict[str, pd.DataFrame],
 ) -> Dict[str, dict]:
     config.ensure_output_dirs()
 
@@ -331,13 +330,15 @@ def train_and_evaluate(
         model_candidates = []
         if is_hybrid:
             model_candidates = [
-                ("RandomForestClassifier_balanced", RandomForestClassifier(class_weight="balanced", random_state=config.random_seed)),
+                ("RandomForestClassifier_balanced",
+                 RandomForestClassifier(class_weight="balanced", random_state=config.random_seed)),
                 ("DecisionTreeClassifier", DecisionTreeClassifier(random_state=config.random_seed)),
             ]
         else:
             model_candidates = [
                 ("RandomForestClassifier", RandomForestClassifier(random_state=config.random_seed)),
-                ("RandomForestClassifier_balanced", RandomForestClassifier(class_weight="balanced", random_state=config.random_seed)),
+                ("RandomForestClassifier_balanced",
+                 RandomForestClassifier(class_weight="balanced", random_state=config.random_seed)),
                 ("DecisionTreeClassifier", DecisionTreeClassifier(random_state=config.random_seed)),
             ]
 

@@ -13,9 +13,11 @@ Usage:
 """
 import sys
 from pathlib import Path
-import pandas as pd
+
 import matplotlib
-matplotlib.use("Agg")                    # drop this line for interactive backends
+import pandas as pd
+
+matplotlib.use("Agg")  # drop this line for interactive backends
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 from matplotlib.lines import Line2D
